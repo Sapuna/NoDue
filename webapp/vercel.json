@@ -1,0 +1,6 @@
+{
+    "builds": [
+      { "src": "/*", "use": "@vercel/go", "config": { "includeFiles": ["./cmd/main.go"], "outputDirectory": "./output" } }
+    ]
+  }
+  
