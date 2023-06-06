@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login Page</title>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container" id="error">
+      <form id="form" action="/" method="GET">
+        <img src="/img/GCIT_Logo.png" />
+        <div class="form-group">
+          <label for="username"></label>
+          <input
+            type="text"
+            name="username"
+            class="form-control"
+            id="username"
+            placeholder="User ID"
+            required
+          />
+          <p id="username" class="username" hidden>
+            Please enter your userid
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+
+          />
+          <p id="passwordError" class="error" hidden>
+            Please enter your password
+          </p>
+        </div>
+        <div>
+          <!-- <a href="">  <button type="submit" class=" btn btn-primary mx-auto">Sign Up</button></a> -->
+          <!-- <a href="/dept/noreq.html"><button type="submit" onclick="" class=" btn btn-primary mx-auto" style="background-color: #CA1818;  padding: 12px 24px; border-radius: 8px; margin-left: 60px; color: #fff;  border: none; cursor: pointer;">Decline</button></a> -->
+          <a href="/dept/dept.html" type="submit" class="btn btn-login" style="margin-top: 15px;">LOGIN</a>
+
+          <!-- <a href=""><button type="submit" class="btn btn-login">Login</button></a> -->
+
+          <a href="/forgotpwd.html" class="btn btn-link" style="margin-top: -70%; margin-left: 63%; color: white">Forgot Password?</a>
+          <div>
+            <a
+              href="/dept/deptsignup.html"
+              class="btn bt-signup"
+              style="margin-top: -26%; margin-left: 1%"
+              ><span> Don't have an account? </span><u>sign Up</u></a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </body>
+</html>

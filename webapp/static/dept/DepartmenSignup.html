@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>No Due System Sign Up Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/deptsignup.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <form id="signup-form" autocomplete="off">
+            <h1 style="margin-bottom: 10px;">Sign Up</h1>
+            <div class="form-group">
+                <input type="text" class="form-label" id="name" placeholder="Name">
+                <small class="text-danger"></small>
+                </input>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-label" id="email" placeholder="Email">
+                <small class="text-danger "></small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-label" id="User-id" placeholder="User ID">
+                <small class="text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <select class="form-label" id="Course">
+                    <option value="">Department Name</option>
+                    <option value="LIBRARY">Library</option>
+                    <option value="FINANCE SECTION">Finance</option>
+                    <option value="STUDENT SERVICE OFFICER">Student service</option>
+                    <option value="COLLEGE CANTEEN">Canteen</option>
+                    <option value="ICT LABk">ICT</option>
+                    <option value="ITERIA">Iteria</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-label" id="password" placeholder="Password">
+                <small class="text-danger w-100"></small>
+                <div id="password-strength" class="text-light text-uppercase"></div>
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-label fw-800" id="confirmPassword" placeholder="Confirm Password">
+                <small class="text-danger"></small>
+            </div>
+            <button type="submit" class=" btn btn-primary mx-auto" style="height: 50px;">Sign Up</button>
+        </form>
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script src="/js/signup.js"></script>
+    <script src="../js/AdminSignup.js"></script>
+</body>
+
+</html>

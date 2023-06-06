@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCIT Due-System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".profile .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function () {
+				$(".notifications").removeClass("active");
+				$(".popup").show();
+			});
+
+			$(".close").click(function () {
+				$(".popup").hide();
+			});
+		});
+	</script>
+
+<body>
+
+	<!---header--->
+	<header>
+		<a href="home.html" class="logo"><img src="/img/logo.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		
+
+		<ul class="navbar">
+			<li><a href="home.html">Home</a></li>
+      <li><a href="cont.html">Status</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+
+    <div class="profile">
+			<div class="icon_wrap">
+				<img src="/img/rko.jpg" alt="profile_pic">
+				<i class="fas fa-chevron-down"></i>
+			</div>
+
+			<div class="profile_dd">
+				<ul class="profile_ul">
+					<li class="profile_li"><a class="profile" href="profile.html"><span class="picon"><i
+									class="fas fa-user-alt"></i>
+							</span>&nbsp;Profile</a>
+					</li>
+					<li class="profile_li"><a class="profile" href="../Index.html"><span class="picon"><i
+									class="fas fa-cog"></i></span>&nbsp; Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+</head><br><br><br><br><br>
+
+	<!---content--->
+    
+	<section class="contact" id="contact">
+        
+  <div class="container">
+    <div class="row">
+      <div class="cart">
+        <div class="cart-header">
+          <h1>LIBRARY</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>Library Team</h2>
+          <p>
+            Email: Library.gcit@rub.edu.bt <br> Phone : 12345678
+          </p>
+        </div>
+      </div><div class="cart">
+        <div class="cart-header">
+          <h1>FINANCE SECTION</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>Finance Team</h2>
+          <p>
+            Email: cheeyong.gcit@rub.edu.bt <br> Phone : +9754744285
+          </p>
+        </div>
+      </div><div class="cart">
+        <div class="cart-header">
+          <h1>STUDENT SERVICE OFFICER</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>SSO Team</h2>
+          <p>
+            Email: sso.gcit@rub.edu.bt <br> Phone : 12345678
+          </p>
+        </div>
+      </div><div class="cart">
+        <div class="cart-header">
+          <h1>ICT LAB</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>ICT Team</h2>
+          <p>
+            Email: dorjiwangchuk.gcit@rub.edu.bt <br> Phone : 17601997
+          </p>
+        </div>
+      </div>
+      <div class="cart">
+        <div class="cart-header">
+          <h1>WANGMO RESTAURANT</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>Canteen Team</h2>
+          <p>
+            Email: wangmo.gcit@rub.edu.bt <br> Phone : 12345678
+          </p>
+        </div>
+      </div>
+      <div class="cart">
+        <div class="cart-header">
+          <h1>ITERIA</h1>
+        </div>&nbsp;
+        <div class="cart-body"><h2>Iteria Team</h2>
+          <p>
+            Email: iteria.gcit@rub.edu.bt <br> Phone : 12345678
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+    </section>
+	<!---custom js link--->
+	<script type="text/javascript" src="/js/script.js"></script>
+
+</body>
+
+</html>

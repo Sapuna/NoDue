@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCIT Due-System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".profile .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function () {
+				$(".notifications").removeClass("active");
+				$(".popup").show();
+			});
+
+			$(".close").click(function () {
+				$(".popup").hide();
+			});
+		});
+	</script>
+
+<body>
+
+	<!---header--->
+	<header>
+		<a href="/admin/vapp.html" class="logo"><img src="/img/logo.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		
+
+		<ul class="navbar">
+			<li><a href="/admin/vapp.html">View Application</a></li>
+		</ul>
+
+		<div class="profile">
+			<div class="icon_wrap"><a href="/admin/adminlogin.html"><i class='fas fa-sign-out-alt' style='font-size:20px;color:black'></i></a>
+			</div>
+		</div>
+	</header>
+</head><br><br><br><br><br>
+
+	<!---content--->
+	<section class="viewapp">
+		<div class="text-content">
+			<h1>View Application</h1>
+			<span>Digital record of all due</span>
+		</div>
+
+		<div class="btt-container">
+
+	  		<div class="btt">
+				<a href="/admin/yr1.html"><span class="btt__text">Year 1</span></a>
+				<a href="/admin/yr1.html">
+					<span class="btt__icon">
+						<ion-icon name="arrow-forward-outline"></ion-icon>
+					</span>
+				</a>
+			</div>
+	
+			<div class="btt">
+				<a href="/admin/yr2.html"><span class="btt__text">Year 2</span></a>
+				<a href="/admin/yr2.html">
+					<span class="btt__icon">
+						<ion-icon name="arrow-forward-outline"></ion-icon>
+					</span>
+				</a>
+			</div>
+
+			<div class="btt">
+				<a href="/admin/yr3.html"><span class="btt__text">Year 3</span></a>
+				<a href="/admin/yr3.html">
+					<span class="btt__icon">
+						<ion-icon name="arrow-forward-outline"></ion-icon>
+					</span>
+				</a>
+			</div>
+	
+			<div class="btt">
+				<a href="/admin/yr4.html"><span class="btt__text">Year 4</span></a>
+				<a href="/admin/yr4.html">
+					<span class="btt__icon">
+						<ion-icon name="arrow-forward-outline"></ion-icon>
+					</span>
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!---custom js link--->
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
+</body>
+
+</html>

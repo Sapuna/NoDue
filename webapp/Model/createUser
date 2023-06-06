@@ -1,0 +1,33 @@
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'user_type') THEN
+    CREATE TYPE user_type AS ENUM ('Department', 'Counselor', 'Student');
+  END IF;
+END $$;
+
+DO $$ BEGIN
+  IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'department_type') THEN
+    CREATE TYPE department_type AS ENUM ('LIBRARY', 'FINANCE SECTION', 'STUDENT SERVICE OFFICER', 'ICT LAB', 'COLLEGE CANTEEN', 'ITERIA', 'STUDENTS', "ADMIN");
+  END IF;
+END $$;
+
+
+CREATE TABLE users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  userID INT NOT NULL,
+  course VARCHAR(255),
+  year VARCHAR(25),
+  semester VARCHAR(25),
+  departmentName department_type,
+  password VARCHAR(255) NOT NULL,
+  type user_type NOT NULL
+);
+
+
+
+INSERT INTO users (username, email, userID, course, year, semester, departmentName, password, type)
+VALUES
+  ('admin', 'admin@example.com', 123, NULL, NULL, NULL, NULL, 'admin_password', 'Department'),
+  ('john', 'john@example.com', 456, 'Computer Science', '2023', 'Spring', NULL, 'john_password', 'Student'),
+  ('emma', 'emma@example.com', 789, 'Finance', '2022', 'Fall', 'LIBRARY', 'emma_password', 'Counselor');

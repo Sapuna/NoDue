@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container" id="error">
+      <a class="department-button" href="./admin/AdminSignUp.html"></a>
+      <a class="Counselor-btn" href="./dept/DepartmenSignup.html"> </a>
+      <form id="login-form">
+        <img src="img/GCIT_Logo.png" />
+        <div class="form-group">
+          <label for="username"></label>
+          <input
+            type="number"
+            name="username"
+            class="form-control"
+            id="userID"
+            placeholder="User ID"
+            pattern="[0-9]{3}"
+            required
+          />
+          <p id="username" class="username" hidden>
+            Please enter your userid
+          </p>
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input
+            type="password"
+            name="password"
+            class="form-control"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <p id="passwordError" class="error" hidden>
+            Please enter your password
+          </p>
+        </div>
+        <div>
+          <button type="submit" class="btn btn-login" style="margin-top: 15px;">Login</button>
+
+          <a href="./forgotpwd.html" class="btn btn-link" style="margin-top: -70%; margin-left: 63%; color: white">Forgot Password?</a>
+          <div>
+            <a
+              href="/user/signup.html"
+              class="btn bt-signup"
+              style="margin-top: -26%; margin-left: 1%"
+              ><span> Don't have an account? </span>Sign Up</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+    
+    <script src="./js/login.js"></script>
+  </body>
+</html>

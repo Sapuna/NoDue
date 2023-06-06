@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCIT Due-System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".profile .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function () {
+				$(".notifications").removeClass("active");
+				$(".popup").show();
+			});
+
+			$(".close").click(function () {
+				$(".popup").hide();
+			});
+		});
+	</script>
+
+<body>
+
+	<!---header--->
+	<header>
+		<a href="/dept/dept.html" class="logo"><img src="/img/logo.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+		
+
+		<ul class="navbar">
+			<li><a href="dept.html">Requests</a></li>
+			<li><a href="approved.html">Approved</a></li>
+			<li><a href="declined.html">Declined</a></li>
+		</ul>
+
+		<div class="profile">
+			<div class="icon_wrap">
+				<img src="/img/rko.jpg" alt="profile_pic">
+				<i class="fas fa-chevron-down"></i>
+			</div>
+
+			<div class="profile_dd">
+				<ul class="profile_ul">
+					<li class="profile_li"><a class="profile" href="deptprofile.html"><span class="picon"><i
+									class="fas fa-user-alt"></i>
+							</span>&nbsp;Profile</a>
+					</li>
+					<li class="profile_li"><a class="profile" href="../Index.html"><span class="picon"><i
+									class="fas fa-cog"></i></span>&nbsp; Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+</head><br><br><br><br><br>
+
+	<!---content--->
+	<section class="contact" id="contact">
+		<div class="table_responsive">
+		<table>
+		  <thead>
+			<tr>
+			  <th>SL NO.</th>
+			  <th>Enrollment Number</th>
+			  <th>Name</th>
+			  <th>Year</th>
+			  <th>STATUS</th>
+			</tr>
+		  </thead>
+	
+		  <tbody class="approved-data">
+
+			<!-- <tr>
+			  <td>1</td>
+			  <td>12220001</td>
+			  <td>Anusha</td>
+			  <td>1</td>
+			  <td>
+				<span class="action_btn">
+				  <a href="#" style="background-color: #C8E7C8;">Approved</a>
+				</span>
+			  </td>
+			</tr>
+
+			<tr>
+				<td>2</td>
+				<td>12220073</td>
+				<td>Sonam</td>
+				<td>1</td>
+				<td>
+				  <span class="action_btn">
+					<a href="#" style="background-color: #C8E7C8;">Approved</a>
+				  </span>
+				</td>
+			  </tr>
+				
+			  <tr>
+				<td>3</td>
+				<td>12220003</td>
+				<td>Tandin</td>
+				<td>2</td>
+				<td>
+				  <span class="action_btn">
+					<a href="#" style="background-color: #C8E7C8;">Approved</a>
+				  </span>
+				</td>
+			  </tr> -->
+			
+		  </tbody>
+		</table>
+	  </div>
+	</div>
+</section>
+	<!---custom js link--->
+
+	<script src="../js/approved.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCIT Due-System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".profile .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function () {
+				$(".notifications").removeClass("active");
+				$(".popup").show();
+			});
+
+			$(".close").click(function () {
+				$(".popup").hide();
+			});
+		});
+	</script>
+
+<body>
+
+	<!---header--->
+	<header>
+		<a href="home.html" class="logo"><img src="/img/logo.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+		<ul class="navbar">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="cont.html">Status</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+
+		<div class="profile">
+			<div class="icon_wrap">
+				<img src="../img/rko.jpg" alt="profile_pic">
+				<i class="fas fa-chevron-down"></i>
+			</div>
+
+			<div class="profile_dd">
+				<ul class="profile_ul">
+					<li class="profile_li"><a class="profile" href="profile.html"><span class="picon"><i
+									class="fas fa-user-alt"></i>
+							</span>&nbsp;Profile</a>
+					</li>
+					<li class="profile_li"><a class="profile" href="../Index.html"><span class="picon"><i
+									class="fas fa-cog"></i></span>&nbsp; Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	</head><br><br><br><br><br>
+
+	<!---content--->
+	<section class="contact" id="contact">
+		<div id="profile-photo">
+			<img src="https://thegoneapp.com/wp-content/uploads/love-aesthetic-pictures-8.jpg"
+				id="profile-src" />
+			<input type="hidden" name="profile-src-container" id="profile-src-container" value="" />
+			<a href="#" id="change-image-button">Change image</a>
+		</div>
+
+		<script>
+			$('#change-image-button').click(function () {
+				var imgSrc = prompt("PROFILE_IMAGE_URL", "https://thegoneapp.com/wp-content/uploads/love-aesthetic-pictures-8.jpg");
+				if (imgSrc != null) {
+					$("#profile-src").attr('src', imgSrc);
+					$("#profile-src-container").val(imgSrc);
+				}
+			});
+
+		</script>
+
+		<div class="table_responsive">
+			<!-- <table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Mrs. User</th>
+					</tr>
+				</thead>
+
+				<thead>
+					<tr>
+						<th>Email Address</th>
+						<th>122222.gcit@rub.edu.bt</th>
+					</tr>
+				</thead>
+
+				<thead>
+					<tr>
+						<th>NameCourse</th>
+						<th>Bsc in Computer Science</th>
+					</tr>
+				</thead>
+
+				<thead>
+					<tr>
+						<th>Year</th>
+						<th>1</th>
+					</tr>
+				</thead>
+
+				<thead>
+					<tr>
+						<th>Semsester</th>
+						<th>2</th>
+					</tr>
+				</thead>
+
+				<thead>
+					<tr>
+						<th>Country</th>
+						<th>Bhutan</th>
+					</tr>
+				</thead>
+
+				</tbody>
+			</table> -->
+		</div>
+		</div>
+	</section>
+	<!---custom js link--->
+	<script type="text/javascript" src="/js/script.js"></script>
+	<script src="../js/profile.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GCIT Due-System</title>
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".profile .icon_wrap").click(function () {
+        $(this).parent().toggleClass("active");
+        $(".notifications").removeClass("active");
+      });
+
+      $(".notifications .icon_wrap").click(function () {
+        $(this).parent().toggleClass("active");
+        $(".profile").removeClass("active");
+      });
+
+      $(".show_all .link").click(function () {
+        $(".notifications").removeClass("active");
+        $(".popup").show();
+      });
+
+      $(".close").click(function () {
+        $(".popup").hide();
+      });
+    });
+  </script>
+
+<body>
+
+  <!---header--->
+  <header>
+    <a href="home.html" class="logo"><img src="/img/logo.png"></a>
+    <div class="bx bx-menu" id="menu-icon"></div>
+
+
+    <ul class="navbar">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="cont.html">Status</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="profile">
+      <div class="icon_wrap">
+        <img src="/img/rko.jpg" alt="profile_pic">
+        <!-- <span class="name">Sapuna Monger</span> -->
+        <i class="fas fa-chevron-down"></i>
+      </div>
+
+      <div class="profile_dd">
+        <ul class="profile_ul">
+          <li class="profile_li"><a class="profile" href="profile.html"><span class="picon"><i
+                  class="fas fa-user-alt"></i>
+              </span>&nbsp;Profile</a>
+          </li>
+          <li class="profile_li"><a class="profile" href="../Index.html"><span class="picon"><i class="fas fa-cog"></i></span>&nbsp;
+              Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  </head><br><br><br><br><br>
+
+  <!---content--->
+  <section class="contact" id="contact">
+    <div class="table_responsive">
+      <table>
+        <thead>
+          <tr>
+            <th>SL NO.</th>
+            <th>DEPARTMENTS</th>
+            <th>STATUS</th>
+          </tr>
+        </thead>
+
+        <tbody class="due-data">
+          <!-- <tr>
+                  <td>1</td>
+                  <td>LIBRARY</td>
+                  <td>
+                    <span class="action_btn">
+                      <a href="#">Pending</a>
+                    </span>
+                  </td>
+                </tr> -->
+
+          <!-- <tr>
+                  <td>2</td>
+                  <td>FINANCE SECTION</td>
+                  <td>
+                    <span class="action_btn">
+                      <a href="#">Pending</a>
+                    </span>
+                  </td>
+                </tr>
+        
+        
+                <tr>
+                  <td>3</td>
+                  <td>STUDENT SERVICE OFFICIER</td>
+                  <td>
+                    <span class="action_btn">
+                      <a href="#">Pending</a>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>ICT LAB</td>
+                    <td>
+                      <span class="action_btn">
+                        <a href="#">Pending</a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>COLLEGE CANTEEN</td>
+                    <td>
+                      <span class="action_btn">
+                        <a href="#">Pending</a>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>ITERIA</td>
+                    <td>
+                      <span class="action_btn">
+                        <a href="#">Pending</a>
+                      </span>
+                    </td>
+                  </tr> -->
+
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary mx-auto submit-due-btn"
+        style="background-color: #71cb61;  padding: 12px 24px; border-radius: 8px; margin-left: 60px; color: #fff; border: none; cursor: pointer; opacity: 0; pointer-events: none; z-index: -100">
+        Approve
+      </button>
+      <!-- <button type="submit" class="btn btn-primary mx-auto submit-due-btn"
+        style="background-color: #71cb61;  padding: 12px 24px; border-radius: 8px; margin-left: 60px; color: #fff; border: none; cursor: pointer; margin-left: 80%; margin-top: 2rem;">
+        Submit
+      </button> -->
+    </div>
+    </div>
+  </section>
+  <!---custom js link--->
+
+  <script src="../js/cont.js"></script>
+
+</body>
+
+</html>

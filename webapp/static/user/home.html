@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GCIT Due-System</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+		rel="stylesheet">
+
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".profile .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".notifications").removeClass("active");
+			});
+
+			$(".notifications .icon_wrap").click(function () {
+				$(this).parent().toggleClass("active");
+				$(".profile").removeClass("active");
+			});
+
+			$(".show_all .link").click(function () {
+				$(".notifications").removeClass("active");
+				$(".popup").show();
+			});
+
+			$(".close").click(function () {
+				$(".popup").hide();
+			});
+		});
+	</script>
+
+<body>
+
+	<!---header--->
+	<header>
+		<a href="home.html" class="logo"><img src="/img/logo.png"></a>
+		<div class="bx bx-menu" id="menu-icon"></div>
+
+
+		<ul class="navbar">
+			<li><a href="home.html">Home</a></li>
+			<li><a href="cont.html">Status</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+
+		<!-- <div class="profile">
+			<div class="icon_wrap">
+				<img src="img/rko.jpg" alt="profile_pic">
+				<span class="name">Sapuna Monger</span>
+				<i class="fas fa-chevron-down"></i>
+			</div>
+
+			<div class="profile_dd">
+				<ul class="profile_ul">
+					<li class="profile_li"><a class="profile" href="profile.html"><span class="picon">
+							</span>&nbsp;&nbsp;&nbsp;Profile</a>
+					</li>
+					<li class="profile_li"><a class="profile" href="#"><span class="picon"></span>&nbsp;&nbsp;&nbsp;Logout</a></li>
+				</ul>
+			</div>
+		</div> -->
+
+		<div class="profile">
+			<div class="icon_wrap">
+				<img src="/img/rko.jpg" alt="profile_pic">
+				<!-- <span class="name">Sapuna Monger</span> -->
+				<i class="fas fa-chevron-down"></i>
+			</div>
+
+			<div class="profile_dd">
+				<ul class="profile_ul">
+					<li class="profile_li"><a class="profile" href="profile.html"><span class="picon"><i
+									class="fas fa-user-alt"></i>
+							</span>&nbsp;Profile</a>
+					</li>
+					<li class="profile_li"><a class="profile" href="../Index.html"><span class="picon"><i
+									class="fas fa-cog"></i></span>&nbsp; Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
+	</head><br><br><br><br><br>
+
+	<!---content--->
+	<section class="contact" id="contact">
+		<div class="card">
+			<div class="card-heading">
+				<h1>GCIT Due-System</h1>
+			</div>
+			<div class="card-content">
+				<p>GCIT due-system refers to a policy in which students are not allowed to graduate or leave the college
+					until they have cleared all outstanding dues owed to the college.<br></p>
+				<p> Under a no-due system, students are required to settle all outstanding dues related to any
+					departments and any other expenses they may have incurred during their time at the college.<br></p>
+				<p>Failure to clear these dues may result in the student being denied their departure or official
+					transcripts.<br></p>
+			</div>
+		</div><br><br>
+		<div class="card">
+			<div class="card-heading">
+				<h1>Instructions</h1>
+			</div>
+			<div class="card-content">
+				<p>Log in to Dues Clearance System using the CC User ID and Password.<br></p>
+				<p>If you are Not Graduating; please do not use the Dues Clearance System. <br></p>
+				<p>Apply to all the department using the "Apply" button on the homepage. <br></p>
+				<p>Please ensure that the No Dues Status column in every department's column reads "confirmed." If any
+					due appears in one of these columns, kindly resolve it with the respective department.<br></p>
+				<p>Once the columns of all departments shows as "confirmed", concerned department will clear the dues, a
+					notification will be send to you.<br></p>
+			</div>
+			<div>
+				<label for="open-modal">
+					<div class="applybtn" style="background-color: #F9A33F; padding-top: 20px; margin-top: 20px;">Apply
+					</div>
+				</label>
+
+				<div class="modal__container">
+					<!-- Here is the hidden checkbox element which makes toggling the modal work -->
+					<input type="checkbox" id="open-modal" class="modal__toggler" />
+					<!-- Here is the background mask. When clicked, it closes the modal. Change this to a div to disable that functionality. -->
+					<label class="modal__mask" for="open-modal"></label>
+					<div class="modal">
+						<label class="modal__close" for="open-modal"></label>
+						<div class="modal__content">
+							<h1 class="modal__title" style="padding-top: 20px;">Your request has been sent
+								<br>sucessfully</h1><br><br>
+							<label class="button" for="open-modal"
+								style="background-color: #F9A33F; padding-top: 20px; border-radius: 12px;"><a
+									href="cont.html"> Continue</a></label>
+						</div>
+					</div>
+				</div>
+			</div>
+	</section>
+	<!---custom js link--->
+	<script type="text/javascript" src="/js/script.js"></script>
+
+	<script src="../js/Due.js"></script>
+
+</body>
+
+</html>
